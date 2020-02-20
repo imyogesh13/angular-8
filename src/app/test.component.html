@@ -18,3 +18,14 @@
   5 angualar demo
 </div>
 <input [id]="myid" type="text" value="Yogesh" [disabled]="false">
+<br/>
+<br/>
+<button on-click="ShowMsg($event)">Show Msg</button>
+<br/>
+<br>
+
+<input type="text" #mytext [(ngModel)]="bindMsg">
+<br>
+<button on-click="logMessage(mytext)">Log message</button>
+
+{{bindMsg}}
