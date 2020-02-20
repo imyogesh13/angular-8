@@ -16,8 +16,11 @@ public isSpecial =true;
 public bindMsg :string ="";
 public displayName = true;
 public color ="blue";
-
-  message ={
+public data =[
+    {id:1,"name":"yogesh"},
+    {id:2,"name":"AAA"}
+  ]
+  public message ={
     "text-success" : !this.hasError,
     "text-danger" : this.hasError,
     "text-special" :this.isSpecial

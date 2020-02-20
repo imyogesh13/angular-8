@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Output } from '@angular/core';
 
 @Component({
   selector: 'my-app',
@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: [ './app.component.css' ]
 })
 export class AppComponent  {
-    parentMsg = 'Angular from parent component';
+    parentMsg : string = "Message from parent component";
+    parentMsg1 : string = "";
 }
