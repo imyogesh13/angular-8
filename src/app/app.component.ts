@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: [ './app.component.css' ]
 })
 export class AppComponent  {
-  parentName = 'Angular from parent comp';
+    parentMsg = 'Angular from parent component';
 }
