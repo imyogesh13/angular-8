@@ -9,7 +9,7 @@ import { PipeComponent } from './pipe.component';
 @NgModule({
   imports:      [ BrowserModule, FormsModule ],
   declarations: [ AppComponent, TestComponent, ChildComponent,PipeComponent ],
-  bootstrap:    [ AppComponent ]
+  bootstrap:    [ AppComponent, PipeComponent ]
 })
 export class AppModule { 
 
