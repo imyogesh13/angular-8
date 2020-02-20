@@ -37,12 +37,28 @@
 <!-- Data binding -->
 
 <!-- Structural directive -->
+
+<!-- ngIf -->
 <div *ngIf="displayName; else elseBlock">
   Angular demo(if block code)
 </div>
+<br><br>
+<div *ngIf="displayName; then thenBlock else elseBlock">
+
+</div>
+
+<ng-template #thenBlock>
+  Angular demo(then block code)
+</ng-template>
 
 <ng-template #elseBlock>
   Angular demo(else block code)
 </ng-template>
 
+<!-- ngSwitch -->
+<div [ngSwitch]="color">
+  <h4 *ngSwitchCase="'red'">You have picked up red</h4>
+  <h4 *ngSwitchCase="'green'">You have picked up green</h4>
+  <h4 *ngSwitchCase="'blue'">You have picked up blue</h4>
+</div>
 <!-- End Structural directive -->
