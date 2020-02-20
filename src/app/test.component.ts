@@ -14,6 +14,8 @@ public textSpecial ="text-special";
 public hasError : boolean = true;
 public isSpecial =true;
 public bindMsg :string ="";
+
+public displayName = false;
   message ={
     "text-success" : !this.hasError,
     "text-danger" : this.hasError,

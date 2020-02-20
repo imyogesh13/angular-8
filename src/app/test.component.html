@@ -1,4 +1,6 @@
 
+<!-- Data binding -->
+<div *ngIf="false">
 <div class="text-special" [class]="successClass">
   1 angualar demo
 </div>
@@ -29,3 +31,18 @@
 <button on-click="logMessage(mytext)">Log message</button>
 
 {{bindMsg}}
+
+</div>
+
+<!-- Data binding -->
+
+<!-- Structural directive -->
+<div *ngIf="displayName; else elseBlock">
+  Angular demo(if block code)
+</div>
+
+<ng-template #elseBlock>
+  Angular demo(else block code)
+</ng-template>
+
+<!-- End Structural directive -->
