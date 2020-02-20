@@ -1,0 +1,20 @@
+
+<div class="text-special" [class]="successClass">
+  1 angualar demo
+</div>
+<div class="text-special" [class]="[successClass, textSpecial]">
+ 2 angualar demo
+</div>
+
+<div class="text-special text-success">
+  3 angualar demo
+</div>
+
+<div [class.text-danger]="hasError">
+  4 angualar demo
+</div>
+
+<div [ngClass]="message">
+  5 angualar demo
+</div>
+<input [id]="myid" type="text" value="Yogesh" [disabled]="false">
