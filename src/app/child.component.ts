@@ -7,7 +7,7 @@ import {Component, Input,Output, EventEmitter} from '@angular/core';
 })
 
 export class ChildComponent{
-    @Input()  public childMsg ="";
+   @Input()  public childMsg ="";
    @Output() public childEvent = new EventEmitter();
    constructor(){
    }
