@@ -14,6 +14,7 @@ export class DepartmentListComponent{
     {"deptId":3, deptname:"SQL Server"},
     {"deptId":4, deptname:"Angular"}
     ];
+    
   constructor(private router:Router, private route:ActivatedRoute){
 
   }
