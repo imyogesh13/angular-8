@@ -8,7 +8,7 @@ import {Router} from '@angular/router'
 
 export class DepartmentListComponent{
 
-  public departments = [
+  public departments = [ 
     {"deptId":1, deptname:"Asp.Net MVC"},
     {"deptId":2, deptname:"Java"},
     {"deptId":3, deptname:"SQL Server"},
