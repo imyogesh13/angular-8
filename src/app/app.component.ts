@@ -8,4 +8,4 @@ import { Component } from '@angular/core';
 export class AppComponent  {
     parentMsg : string = "Message from parent component";
     parentMsg1 : string = "";
-}
+} 
