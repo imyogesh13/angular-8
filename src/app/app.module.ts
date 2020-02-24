@@ -8,10 +8,21 @@ import { PipeComponent } from './pipe.component';
 import {EmployeeService} from './employee.service';
 import {EmpListComponent} from './emp-list.component';
 import {EmpDetailsComponent} from './emp-details.component';
+import { HttpClientModule} from '@angular/common/http';
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule ],
-  declarations: [ AppComponent, TestComponent, ChildComponent,PipeComponent, EmpListComponent, EmpDetailsComponent ],
+  declarations: [
+     AppComponent, 
+     TestComponent,
+     ChildComponent,
+     PipeComponent,
+     EmpListComponent,
+     EmpDetailsComponent ],
+  imports:[
+     BrowserModule,
+     FormsModule,
+     HttpClientModule
+      ],
   providers:[EmployeeService],
   bootstrap:    [ AppComponent, PipeComponent ]
 })
