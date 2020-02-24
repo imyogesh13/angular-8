@@ -4,7 +4,7 @@
   <ul class="items">
     <li (click)="onSelect(dept)"  [class.selected]="isSelected(dept)" *ngFor="let dept of departments">
        <span class="badge">{{dept.id}}</span> 
-       <!-- <span></span> -->{{dept.deptname}}
+       <div>{{dept.deptname}}</div>
     </li>
   </ul>
 </div>

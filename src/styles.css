@@ -128,3 +128,7 @@ h1 {
     /* background-color: blueviolet; */
     color:blueviolet;
   }
+  .items li > div{
+    margin-top: -33px;
+    margin-left: 23px;
+  }
