@@ -4,6 +4,8 @@ import {EmpListComponent} from './emp-list.component';
 import {EmpDetailsComponent} from './emp-details.component';
 import {PageNotFoundComponent} from './pagenotfound.component';
 import {DepartmentListComponent} from './departmentlist.component';
+import {DepartmentDetailsComponent} from './departmentdetails.component';
+
 
 const routes:Routes =[
   {path:'', redirectTo:'departmentlist', pathMatch:'full'},
