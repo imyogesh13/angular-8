@@ -8,9 +8,9 @@ import {DepartmentDetailsComponent} from './departmentdetails.component';
 
 
 const routes:Routes =[
-  {path:'', redirectTo:'departments', pathMatch:'full'},
-  {path:"departments", component: DepartmentListComponent},
-  {path:'departments/:id',component:DepartmentDetailsComponent},
+  {path:'', redirectTo:'departments-list', pathMatch:'full'},
+  {path:"departments-list", component: DepartmentListComponent},
+  {path:'departments-list/:id',component:DepartmentDetailsComponent},
   {path:"employeelist", component: EmpListComponent},
   {path:"employeedetails", component: EmpDetailsComponent},
   {path:"**", component:PageNotFoundComponent}

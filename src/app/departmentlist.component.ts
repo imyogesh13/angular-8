@@ -24,7 +24,8 @@ export class DepartmentListComponent{
      })
    }
    onSelect(dept){
-     this.router.navigate(['/departments',dept.deptId]);
+     //this.router.navigate(['/departments',dept.deptId]);
+     this.router.navigate([dept.deptId],{relativeTo:this.route})
    }
 
    isSelected(dept)
