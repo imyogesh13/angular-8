@@ -9,6 +9,7 @@ import {EmployeeService} from './employee.service';
 import {EmpListComponent} from './emp-list.component';
 import {EmpDetailsComponent} from './emp-details.component';
 import { HttpClientModule} from '@angular/common/http';
+import { AppRoutingModule, routingComponent} from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -17,11 +18,13 @@ import { HttpClientModule} from '@angular/common/http';
      ChildComponent,
      PipeComponent,
      EmpListComponent,
-     EmpDetailsComponent ],
+     EmpDetailsComponent,
+     routingComponent ],
   imports:[
      BrowserModule,
      FormsModule,
-     HttpClientModule
+     HttpClientModule,
+     AppRoutingModule
       ],
   providers:[EmployeeService],
   bootstrap:    [ AppComponent ]
