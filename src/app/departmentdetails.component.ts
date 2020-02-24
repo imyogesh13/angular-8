@@ -23,13 +23,13 @@ export class DepartmentDetailsComponent{
       let id = this.departmetId - 1;
       console.log(id);
 
-      this.router.navigate(['/departments-list',id]);
+      this.router.navigate(['/departments',id]);
        //this.router.navigate(['/departments',dept.deptId]);
    }
 
    goNext(){
       let id = this.departmetId +1;
-      this.router.navigate(['./departments-list',id]);
+      this.router.navigate(['./departments',id]);
    }
    goBackToDeptList(){
       let selectedId = this.departmetId ? this.departmetId : null;
