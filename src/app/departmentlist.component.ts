@@ -1,4 +1,5 @@
 import {Component} from '@angular/core';
+import {Router} from '@angular/router'
 
 @Component({
   selector :"app-departmentlist",
@@ -13,9 +14,12 @@ export class DepartmentListComponent{
     {"deptId":3, deptname:"SQL Server"},
     {"deptId":4, deptname:"Angular"}
     ];
-  constructor(){
+  constructor(private router:Router){
 
   }
    ngOnInit(){
+   }
+   onSelect(dept){
+     this.router.navigate(['/departments',dept.deptId]);
    }
 }

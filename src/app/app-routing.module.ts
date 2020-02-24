@@ -8,8 +8,9 @@ import {DepartmentDetailsComponent} from './departmentdetails.component';
 
 
 const routes:Routes =[
-  {path:'', redirectTo:'departmentlist', pathMatch:'full'},
-  {path:"departmentlist", component: DepartmentListComponent},
+  {path:'', redirectTo:'departments', pathMatch:'full'},
+  {path:"departments", component: DepartmentListComponent},
+  {path:'departments/:id',component:DepartmentDetailsComponent},
   {path:"employeelist", component: EmpListComponent},
   {path:"employeedetails", component: EmpDetailsComponent},
   {path:"**", component:PageNotFoundComponent}
@@ -22,4 +23,4 @@ const routes:Routes =[
 })
 
 export class AppRoutingModule{}
-export const routingComponent =[EmpListComponent, EmpDetailsComponent,PageNotFoundComponent, DepartmentListComponent]; 
+export const routingComponent =[EmpListComponent, EmpDetailsComponent,PageNotFoundComponent, DepartmentListComponent,DepartmentDetailsComponent]; 
