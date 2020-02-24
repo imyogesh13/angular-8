@@ -30,8 +30,6 @@ export class DepartmentListComponent{
 
    isSelected(dept)
    {
-     console.log(this.selectedId);
-     console.log(dept.id);
      return dept.deptId === this.selectedId;
    }
 }
