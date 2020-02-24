@@ -14,6 +14,7 @@ export class EmployeeService {
   getEmployee():Observable<IEmployee[]>{
     return this.http.get<IEmployee[]>(this._url)
     .pipe(catchError(this.errorHandler));
+    
   }
   errorHandler(error:HttpErrorResponse){
     return throwError(error.message || "Server error");
