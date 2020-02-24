@@ -36,4 +36,11 @@ export class DepartmentDetailsComponent{
       // this.router.navigate(['/departments',{id:selectedId,test:'testval'}]);
       this.router.navigate(["../",{id:selectedId}],{relativeTo:this.route});
    }
+
+   showOverview(){
+
+   }
+   showContact(){
+     
+   }
 }

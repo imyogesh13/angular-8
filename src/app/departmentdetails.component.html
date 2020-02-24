@@ -2,9 +2,16 @@
 
 <h4>You have selected department with id = {{departmetId}}</h4>
 
+<p>
+  <button (click)="showOverview()">Overview</button>
+  <button (click)="showContact()">Contact</button>
+  <router-outlet></router-outlet>
+</p>
+<p>
 <a (click)="goPrevious()">Previous</a>
 &nbsp;&nbsp;
 <a (click)="goNext()">Next</a>
 &nbsp;&nbsp;
 <a (click)="goBackToDeptList()">Back to Department list</a>
 &nbsp;&nbsp;
+<p>
