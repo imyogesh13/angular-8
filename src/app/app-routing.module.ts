@@ -11,7 +11,14 @@ import {DepartmentsContactComponent} from './departments-contact.component';
 const routes:Routes =[
   {path:'', redirectTo:'departments', pathMatch:'full'},
   {path:"departments", component: DepartmentListComponent},
-  {path:'departments/:id',component:DepartmentDetailsComponent},
+  {
+    path:'departments/:id',
+    component:DepartmentDetailsComponent,
+    children:[
+      {path:"overview",component:DepartmentsOverviewComponent},
+      {path:"contact",component:DepartmentsContactComponent}
+    ]
+    },
   {path:"employeelist", component: EmpListComponent},
   {path:"employeedetails", component: EmpDetailsComponent},
   {path:"**", component:PageNotFoundComponent}
