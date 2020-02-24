@@ -33,6 +33,6 @@ export class DepartmentDetailsComponent{
    }
    goBackToDeptList(){
       let selectedId = this.departmetId ? this.departmetId : null;
-     this.router.navigate(['/departments',{id:selectedId}]);
+     this.router.navigate(['/departments',{id:selectedId,test:'testval'}]);
    }
 }
