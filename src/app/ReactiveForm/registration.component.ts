@@ -18,6 +18,9 @@ export class RegistrationComponent {
       postalCode : ['']
     })
   });
+  get userName (){ 
+    return this.registrationForm.get('userName');
+  }
   // registrationForm = new FormGroup({
   //   userName: new FormControl(""),
   //   password: new FormControl(""),
