@@ -1,5 +1,10 @@
-import { Component } from "@angular/core";
-import { FormGroup, FormControl, FormBuilder, Validators } from "@angular/forms";
+import { Component, OnInit } from "@angular/core";
+import {
+  FormGroup,
+  FormControl,
+  FormBuilder,
+  Validators
+} from "@angular/forms";
 import { forbiddenNameValidators } from "../shared/user-name.validators";
 import { PasswordValidators } from "../shared/password.validators";
 
@@ -7,25 +12,55 @@ import { PasswordValidators } from "../shared/password.validators";
   selector: "app-registration",
   templateUrl: "./registration.component.html"
 })
-export class RegistrationComponent {
-  
-  constructor(private fb: FormBuilder) {}
-  ngOnInit() {}
-  registrationForm = this.fb.group({
-    userName : ['', [Validators.required, Validators.minLength(3),forbiddenNameValidators(/password/)]],
-    email : [''],
-    subscribe:[false],
-    password : [''],
-    confirmPassword : [''],
-    address : this.fb.group({
-      city : [''],
-      state : [''],
-      postalCode : ['']
-    })
-  },{validators : PasswordValidators});
-  get userName (){ 
-    return this.registrationForm.get('userName');
+export class RegistrationComponent implements OnInit {
+  registrationForm: FormGroup;
+  get userName() {
+    return this.registrationForm.get("userName");
   }
+   get email() {
+    return this.registrationForm.get("email");
+  }
+  constructor(private fb: FormBuilder) {}
+
+  ngOnInit() {
+    this.registrationForm = this.fb.group(
+      {
+        userName: [
+          "",
+          [
+            Validators.required,
+            Validators.minLength(3),
+            forbiddenNameValidators(/password/)
+          ]
+        ],
+        email: [""],
+        subscribe: [false],
+        password: [""],
+        confirmPassword: [""],
+        address: this.fb.group({
+          city: [""],
+          state: [""],
+          postalCode: [""]
+        })
+      },
+      { validators: PasswordValidators }
+    );
+
+    this.registrationForm.get('subscribe').valueChanges
+    .subscribe(checkedValue => {
+      const email = this.registrationForm.get("email");
+      if(checkedValue)
+      {
+        email.setValidators(Validators.required);
+      }
+      else{
+        email.clearValidators();
+      }
+      email.updateValueAndValidity();
+    })
+  }
+
+
   // registrationForm = new FormGroup({
   //   userName: new FormControl(""),
   //   password: new FormControl(""),
@@ -48,9 +83,9 @@ export class RegistrationComponent {
     //   }
     // });
     this.registrationForm.patchValue({
-      userName: 'Yogesh',
-      password: 'test',
-      confirmPassword: 'test'
+      userName: "Yogesh",
+      password: "test",
+      confirmPassword: "test"
     });
   }
 }
