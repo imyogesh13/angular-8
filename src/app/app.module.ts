@@ -12,6 +12,7 @@ import { HttpClientModule} from '@angular/common/http';
 import { AppRoutingModule, routingComponent} from './app-routing.module';
 import {TdpDemoComponent} from './tdpdemo.component';
 import {EnrollmentService} from './enrollment.service';
+import {RegistrationComponent} from './ReactiveForm/registration.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,9 @@ import {EnrollmentService} from './enrollment.service';
      EmpListComponent,
      EmpDetailsComponent,
      routingComponent,
-     TdpDemoComponent ],
+     TdpDemoComponent,
+     RegistrationComponent
+      ],
   imports:[
      BrowserModule,
      FormsModule,
