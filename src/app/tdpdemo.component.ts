@@ -19,11 +19,13 @@ export class TdpDemoComponent{
    }
    onSubmit(){
      this._enrollService.enroll(this.userModel)
-     .subscribe(data=> console.log("Success!", data))
-     .pipe(catchError(this.errorHandler));
-
-     errorHandler(error:HttpErrorResponse){
-    return throwError(error.message || "Server error");
-  }
+     .subscribe(
+       data => console.log("Success!", data),
+       error => console.log("Error!", error)
+       );
+     //.pipe(catchError(this.errorHandler));
    }
+  //    errorHandler(error:HttpErrorResponse){
+  //   return throwError(error.message || "Server error");
+  // }   
 }

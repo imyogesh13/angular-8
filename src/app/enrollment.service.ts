@@ -15,7 +15,7 @@ export class EnrollmentService {
  
 
  enroll(user: User){
-        this.http.post<any>(this._url, user);
+        return this.http.post<any>(this._url, user);
  }
 
 }
