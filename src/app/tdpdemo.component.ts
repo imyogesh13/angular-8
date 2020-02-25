@@ -6,6 +6,8 @@ import {Component} from '@angular/core';
 })
 
 export class TdpDemoComponent{
+
+  public topics =['Asp.net MVC', 'Java', 'SQl server', 'C#'];
    constructor(){
    }
    ngOnInit(){
