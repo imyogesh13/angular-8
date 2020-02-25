@@ -1,5 +1,5 @@
 import { Component } from "@angular/core";
-import { FormGroup, FormControl, FormBuilder } from "@angular/forms";
+import { FormGroup, FormControl, FormBuilder, Validators } from "@angular/forms";
 @Component({
   selector: "app-registration",
   templateUrl: "./registration.component.html"
@@ -9,7 +9,7 @@ export class RegistrationComponent {
   constructor(private fb: FormBuilder) {}
   ngOnInit() {}
   registrationForm = this.fb.group({
-    userName : [''],
+    userName : ['', [Validators.required, Validators.minLength(3)]],
     password : [''],
     confirmPassword : [''],
     address : this.fb.group({
