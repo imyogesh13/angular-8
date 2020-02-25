@@ -13,6 +13,8 @@ export class RegistrationComponent {
   ngOnInit() {}
   registrationForm = this.fb.group({
     userName : ['', [Validators.required, Validators.minLength(3),forbiddenNameValidators(/password/)]],
+    email : [''],
+    subscribe:[false],
     password : [''],
     confirmPassword : [''],
     address : this.fb.group({
