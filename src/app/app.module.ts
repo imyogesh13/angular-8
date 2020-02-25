@@ -10,6 +10,7 @@ import {EmpListComponent} from './emp-list.component';
 import {EmpDetailsComponent} from './emp-details.component';
 import { HttpClientModule} from '@angular/common/http';
 import { AppRoutingModule, routingComponent} from './app-routing.module';
+import {TdpDemoComponent} from './tdpdemo.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { AppRoutingModule, routingComponent} from './app-routing.module';
      PipeComponent,
      EmpListComponent,
      EmpDetailsComponent,
-     routingComponent ],
+     routingComponent,
+     TdpDemoComponent ],
   imports:[
      BrowserModule,
      FormsModule,
