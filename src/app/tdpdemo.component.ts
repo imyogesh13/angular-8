@@ -18,12 +18,13 @@ export class TdpDemoComponent{
    }
    ngOnInit(){
    }
-   onSubmit(){
-     this._enrollService.enroll(this.userModel)
-     .subscribe(
-       data => console.log("Success!", data),
-       error => this.errorMsg = error.statusText
-       );
+   onSubmit(userForm){
+     console.log(userForm);
+    //  this._enrollService.enroll(this.userModel)
+    //  .subscribe(
+    //    data => console.log("Success!", data),
+    //    error => this.errorMsg = error.statusText
+    //    );
      //.pipe(catchError(this.errorHandler));
    }
   //    errorHandler(error:HttpErrorResponse){

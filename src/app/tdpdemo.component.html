@@ -1,6 +1,6 @@
 <div class="container-fluid">
   <h1>TDP demo</h1>
-  <form #userForm="ngForm" (ngSubmit)="onSubmit()">
+  <form #userForm="ngForm" (ngSubmit)="onSubmit(userForm)">
     <!-- {{userForm.value | json}}
     <hr />
     {{userModel | json}} -->{{errorMsg}}
