@@ -15,8 +15,8 @@ export class EnrollmentService {
  
 
  enroll(user: User){
-        return this.http.post<any>(this._url, user)
-        .pipe(catchError(this.errorHandler));
+        return this.http.post<any>(this._url, user);
+        //.pipe(catchError(this.errorHandler));
  }
 
 errorHandler(error: HttpErrorResponse){

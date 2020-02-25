@@ -13,6 +13,7 @@ export class TdpDemoComponent{
 
   public topics =['Asp.net MVC', 'Java', 'SQl server', 'C#'];
   public userModel = new User("Rob","rob@gmail.com",1234567890,'','morning',false);
+  errorMsg;
    constructor(private _enrollService: EnrollmentService){
    }
    ngOnInit(){
@@ -21,7 +22,7 @@ export class TdpDemoComponent{
      this._enrollService.enroll(this.userModel)
      .subscribe(
        data => console.log("Success!", data),
-       error => console.log("Error!", error)
+       error => this.errorMsg = error.statusText
        );
      //.pipe(catchError(this.errorHandler));
    }
