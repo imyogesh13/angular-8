@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { TestComponent } from './test.component';
 import { ChildComponent } from './child.component';
@@ -30,7 +30,8 @@ import {RegistrationComponent} from './ReactiveForm/registration.component';
      BrowserModule,
      FormsModule,
      HttpClientModule,
-     AppRoutingModule
+     AppRoutingModule,
+     ReactiveFormsModule
       ],
   providers:[EmployeeService],
   bootstrap:    [ AppComponent ]
