@@ -1,5 +1,8 @@
 import { Component } from "@angular/core";
 import { FormGroup, FormControl, FormBuilder, Validators } from "@angular/forms";
+import { forbiddenNameValidators } from "../shared/user-name.validators";
+import { PasswordValidators } from "../shared/password.validators";
+
 @Component({
   selector: "app-registration",
   templateUrl: "./registration.component.html"
@@ -9,7 +12,7 @@ export class RegistrationComponent {
   constructor(private fb: FormBuilder) {}
   ngOnInit() {}
   registrationForm = this.fb.group({
-    userName : ['', [Validators.required, Validators.minLength(3)]],
+    userName : ['', [Validators.required, Validators.minLength(3),forbiddenNameValidators(/password/)]],
     password : [''],
     confirmPassword : [''],
     address : this.fb.group({
@@ -17,7 +20,7 @@ export class RegistrationComponent {
       state : [''],
       postalCode : ['']
     })
-  });
+  },{validators : PasswordValidators});
   get userName (){ 
     return this.registrationForm.get('userName');
   }

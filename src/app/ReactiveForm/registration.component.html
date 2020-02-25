@@ -12,6 +12,7 @@
       <div *ngIf="userName.invalid && userName.touched">
         <small *ngIf="userName.errors?.required"  class="text-danger">Username is required</small>
         <small *ngIf="userName.errors?.minlength"   class="text-danger">Username must be minimun 3 character</small>
+        <small *ngIf="userName.errors?.forbiddenName"   class="text-danger"> {{userName.errors?.forbiddenName.value}} username not allowed</small>
       </div>
       <!-- {{registrationForm.get('userName').valid }}
       {{registrationForm.get('userName').untouched}} -->
@@ -24,7 +25,11 @@
 
     <div class="form-group">
       <label>Confirm password</label>
-      <input type="password" class="form-control" formControlName="confirmPassword">
+      <input type="password"  class="form-control" formControlName="confirmPassword">
+      <small  class="text-danger" *ngIf="registrationForm.errors?.misMatch">Password do not match</small>
+      <!-- <div *ngIf="registrationForm.get('confirmPassword').touched || registrationForm.get('confirmPassword').invalid">
+         <small  class="text-danger" *ngIf="registrationForm.errors?.misMatch">Password do not match</small>
+      </div> -->
     </div>
 
     <div formGroupName="address">
