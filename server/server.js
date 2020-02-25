@@ -13,6 +13,7 @@ app.get('/', function(req, res){
 
 app.post('/enroll', function(req,res){
    console.log(req.body);
+   res.status(200).send({"message": "Data recieved!!"});
 })
 app.listen(PORT,function(){
   console.log("Server running on localhost:"+PORT);
