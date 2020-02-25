@@ -8,7 +8,7 @@ import {User} from './user';
 export class TdpDemoComponent{
 
   public topics =['Asp.net MVC', 'Java', 'SQl server', 'C#'];
-  userModel = new User("Rob","rob@gmail.com",1234567890,'','morning',false);
+  userModel = new User("","rob@gmail.com",1234567890,'','morning',false);
    constructor(){
    }
    ngOnInit(){
