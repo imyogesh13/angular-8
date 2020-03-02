@@ -3,7 +3,8 @@ import {
   FormGroup,
   FormControl,
   FormBuilder,
-  Validators
+  Validators,
+  FormArray
 } from "@angular/forms";
 import { forbiddenNameValidators } from "../shared/user-name.validators";
 import { PasswordValidators } from "../shared/password.validators";
@@ -19,6 +20,14 @@ export class RegistrationComponent implements OnInit {
   }
    get email() {
     return this.registrationForm.get("email");
+  }
+
+  get alternateEmails(){
+    return this.registrationForm.get('alternateEmail') as FormArray;
+  }
+
+  addAlternateEmails(){
+    return this.alternateEmails.push(this.fb.control(''));
   }
   constructor(private fb: FormBuilder) {}
 
@@ -41,7 +50,8 @@ export class RegistrationComponent implements OnInit {
           city: [""],
           state: [""],
           postalCode: [""]
-        })
+        }),
+        alternateEmail : this.fb.array([])
       },
       { validators: PasswordValidators }
     );
