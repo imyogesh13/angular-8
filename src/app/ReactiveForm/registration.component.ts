@@ -23,7 +23,7 @@ export class RegistrationComponent implements OnInit {
   }
 
   get alternateEmails(){
-    return this.registrationForm.get('alternateEmail') as FormArray;
+    return this.registrationForm.get('alternateEmails') as FormArray;
   }
 
   addAlternateEmails(){
@@ -51,7 +51,7 @@ export class RegistrationComponent implements OnInit {
           state: [""],
           postalCode: [""]
         }),
-        alternateEmail : this.fb.array([])
+        alternateEmails : this.fb.array([])
       },
       { validators: PasswordValidators }
     );
@@ -97,5 +97,11 @@ export class RegistrationComponent implements OnInit {
       password: "test",
       confirmPassword: "test"
     });
+
+    
   }
+
+  onSubmit(){
+      console.log(this.registrationForm.value);
+    }
 }
