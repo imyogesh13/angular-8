@@ -18,9 +18,13 @@
       {{registrationForm.get('userName').untouched}} -->
 		</div>
 		<div class="form-group">
-			<label>Email</label>
+			<label>Email</label>&nbsp;&nbsp;
+      <button type="button" class="btn btn-secondary btn-sm m-2"c (click)="addAlternateEmails()">Add e-mail</button>
 			<input type="email" [class.is-invalid]="email.invalid && email.touched" class="form-control" name="email" formControlName="email">
       <small [class.d-none]="email.valid || email.untouched">Email is required</small>
+      <div formArrayName="alternateEmails" *ngFor="let emails of alternateEmails.controls;let i=index">
+          <input type="text" class="form-control my-1" [formControlName]="i">&nbsp;&nbsp;
+      </div>
     </div>
 
 			<div class="form-check mb-3">
