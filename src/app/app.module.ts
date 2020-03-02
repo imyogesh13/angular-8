@@ -14,6 +14,8 @@ import {TdpDemoComponent} from './tdpdemo.component';
 import {EnrollmentService} from './enrollment.service';
 import {RegistrationComponent} from './ReactiveForm/registration.component';
 
+// import {RegistrationService} from './service/registration.service'
+
 @NgModule({
   declarations: [
      AppComponent, 
@@ -33,7 +35,7 @@ import {RegistrationComponent} from './ReactiveForm/registration.component';
      AppRoutingModule,
      ReactiveFormsModule
       ],
-  providers:[EmployeeService],
+  providers:[EmployeeService,],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { 
